@@ -1,0 +1,296 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: #0f172a;
+  line-height: 1.6;
+  background: #ffffff;
+}
+
+/* =========================
+   PRODUCT HERO
+========================= */
+.product-hero {
+  padding: 90px 20px 70px;
+  background: linear-gradient(
+    to bottom,
+    #0f172a 0%,
+    #111827 100%
+  );
+  color: #ffffff;
+  text-align: center;
+}
+
+.product-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.product-hero p {
+  font-size: 18px;
+  max-width: 820px;
+  margin: 0 auto 28px;
+  color: #e5e7eb;
+}
+
+.hero-note {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* =========================
+   CTA BUTTON (REUSED)
+========================= */
+.cta-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #facc15, #fde047);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.35);
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.cta-btn span {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 2px;
+  color: #3f3f46;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(250, 204, 21, 0.45);
+}
+
+/* =========================
+   GENERIC SECTION
+========================= */
+.section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* =========================
+   PROBLEM LIST
+========================= */
+.problem-list {
+  max-width: 700px;
+  margin: auto;
+  list-style: none;
+}
+
+.problem-list li {
+  font-size: 17px;
+  padding: 10px 0;
+}
+
+.section-text {
+  margin-top: 20px;
+  max-width: 760px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #374151;
+}
+
+/* =========================
+   LIGHT BACKGROUND SECTIONS
+========================= */
+.bg-light {
+  background: #f8fafc;
+}
+
+/* =========================
+   FEATURES GRID
+========================= */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.feature-box {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 15px;
+  color: #374151;
+}
+
+/* =========================
+   STEPS
+========================= */
+.steps {
+  max-width: 700px;
+  margin: auto;
+  padding-left: 18px;
+}
+
+.steps li {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.review-video {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.video-placeholder {
+  height: 180px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* =========================
+   PRICING
+========================= */
+.pricing {
+  background: #0f172a;
+  color: #ffffff;
+  text-align: center;
+}
+
+.price-box {
+  max-width: 360px;
+  margin: 30px auto 0;
+  background: #111827;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.new-price {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+.price-note {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+/* =========================
+   FAQ
+========================= */
+details {
+  max-width: 700px;
+  margin: 14px auto;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+details p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+.final-cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    #111827,
+    #0f172a
+  );
+  color: #ffffff;
+}
+
+.final-cta h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.final-cta p {
+  font-size: 17px;
+  max-width: 650px;
+  margin: 0 auto 26px;
+  color: #e5e7eb;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .product-hero h1 {
+    font-size: 30px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .new-price {
+    font-size: 32px;
+  }
+}
