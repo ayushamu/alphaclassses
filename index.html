@@ -8,14 +8,74 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+  
+  <!-- CSS Files -->
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="scroll-top.css">
+
 
   
 </head>
 <body>
+<header class="site-header">
+  <div class="header-container">
 
-<header>
+    <!-- LOGO -->
+    <div class="logo">
+  <a href="index.html" class="logo">
+      <img src="resources/logo 4.jpg" alt="Alpha Classes">
+      <h2>Alpha Classes</h2>
+    </a>
+</div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="nav-links desktop-nav">
+    
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="amu-forms-counselling-2026.html">Counselling</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="team.html">Our Team</a></li>
+    </ul>
+  </nav>
+
+    <!-- HAMBURGER ICON -->
+    <div class="hamburger" onclick="openMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  </div>
+</header>
+
+<!-- MOBILE SIDE NAV -->
+<div id="sideNav" class="side-nav">
+  <div class="side-nav-header">
+    <span>Menu</span>
+    <button onclick="closeMenu()">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="index.html#courses" onclick="closeMenu()">Courses</a>
+  <a href="amu-forms-counselling-2026.html" onclick="closeMenu()">Counselling</a>
+  <a href="team.html" onclick="closeMenu()">Our Team</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+<!-- <header>
 
   
   <nav>
@@ -26,11 +86,11 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#courses">Courses</a></li>
-      <li><a href="#counselling">Counselling</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="amu-forms-counselling-2026.html">Counselling</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-</header>
+</header> -->
 <section class="hero-slider" id="home">
   <div class="slides">
 
@@ -44,7 +104,7 @@
   <div class="hero-content">
     <h1>AMU Forms & Counselling Support 2026</h1>
     <p>Complete hand-holding support for AMU Class 1, 6 & 9 admissions — from form filling to counselling.</p>
-  <div class="hero-cta"><a href="#amu-forms-counselling-2026.html" class="cta-btn">
+  <div class="hero-cta"><a href="amu-forms-counselling-2026.html" class="cta-btn">
   Get Complete Support @ ₹499
   <span>Limited to first 15 students</span>
 </a>
@@ -100,10 +160,56 @@
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Alpha Classes. All rights reserved.</p>
+
+<footer class="site-footer">
+  <!-- scroll-top button -->
+  <button id="scrollTopBtn">
+  <i class="fas fa-angle-double-up"></i>
+</button>
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-col">
+      <img src="resources/logo 4.jpg" alt="Alpha Classes" class="footer-logo">
+      <p class="footer-text">
+        Alpha Classes provides trusted guidance for AMU admissions,
+        entrance exams, and academic success.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="amu-forms-counselling-2026.html">Counselling Support</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    
+
+    <!-- SOCIAL -->
+    <div class="footer-social">
+  <a href="https://www.instagram.com/alphaclasses90/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@AlphaClasses90" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  <a href="https://t.me/alphaclasses90" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+  <a href="https://chat.whatsapp.com/JwvTTU2NO8uAA770LAKu60" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2026 Alpha Classes. All rights reserved.
+  </div>
 </footer>
+
 <!-- Link the external script here -->
     <script src="app.js"></script>
+    <script src="scroll-top.js"></script>
+
 </body>
 </html>

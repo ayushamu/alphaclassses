@@ -11,26 +11,39 @@
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="page1.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="scroll-top.css">
+<link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
   
 </head>
+
+
+<body>
 <header>
+ <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="resources/logo 4.jpg" alt="Alpha Classes">
+      <h2>Alpha Classes</h2>
+    </a>
 
   
-  <nav>
-    <div class="logo">
-  <img src="resources/logo 4.jpg" alt="Alpha Classes Logo" />
-  <h2>Alpha Classes</h2>
-</div>
+  <nav >
+  
     <ul>
-      <li><a href="#home">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#courses">Courses</a></li>
       <li><a href="#counselling">Counselling</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+ 
+
 </header>
-<body>
 <section class="product-hero">
   <div class="product-hero-content">
     <h1>AMU Forms & Counselling Support 2026</h1>
@@ -40,7 +53,7 @@
     </p>
 
     <div class="hero-cta">
-      <a href="#pricing" class="cta-btn">
+      <a href="https://pages.razorpay.com/AMU-Forms-support" class="cta-btn">
         Get Complete Support @ ₹499
         <span>Limited to first 15 students</span>
       </a>
@@ -122,13 +135,20 @@
 
   <div class="reviews-grid">
     <div class="review-video">
-      <div class="video-placeholder">Video Review</div>
+      <div class="video-wrapper"><iframe
+    src="https://www.youtube.com/embed/RbaBbf1iBtQ?si=i2V0nwZhYjLPSSEB"
+    title="Student Review"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
       <p>“Form filling was smooth and stress-free.”</p>
     </div>
 
     <div class="review-video">
       <div class="video-placeholder">Video Review</div>
-      <p>“Proper counselling helped us avoid mistakes.”</p>
+      <p class="review-text">“Proper counselling helped us avoid mistakes.”</p>
     </div>
   </div>
 </section>
@@ -141,7 +161,7 @@
     <p class="new-price">₹499</p>
     <p class="price-note">Offer valid for first 15 students only</p>
 
-    <a href="#" class="cta-btn">
+    <a href="https://pages.razorpay.com/AMU-Forms-support" class="cta-btn">
       Enroll for AMU 2026 Support
       <span>Secure payment via Razorpay</span>
     </a>
@@ -173,11 +193,69 @@
     Let experts handle the process while you focus on preparation.
   </p>
 
-  <a href="#pricing" class="cta-btn">
+  <a href="https://pages.razorpay.com/AMU-Forms-support" class="cta-btn">
     Get Admission Support @ ₹499
     <span>Limited seats available</span>
   </a>
 </section>
+<footer class="site-footer">
+  <!-- scroll-top button -->
+  <button id="scrollTopBtn">
+  <i class="fas fa-angle-double-up"></i>
+</button>
+
+
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-col">
+      <img src="resources/logo 4.jpg" alt="Alpha Classes" class="footer-logo">
+      <p class="footer-text">
+        Alpha Classes provides trusted guidance for AMU admissions,
+        entrance exams, and academic success.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="amu-forms-counselling-2026.html">Counselling Support</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- SERVICES -->
+    <!-- <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li>AMU Class 1, 6 & 9 Forms</li>
+        <li>AMU Entrance Counselling</li>
+        <li>Test Series & Courses</li>
+        <li>Personal Mentorship</li>
+      </ul>
+    </div> -->
+
+    <!-- SOCIAL -->
+    <div class="footer-social">
+  <a href="https://www.instagram.com/alphaclasses90/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@AlphaClasses90" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  <a href="https://t.me/alphaclasses90" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+  <a href="https://chat.whatsapp.com/JwvTTU2NO8uAA770LAKu60" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2026 Alpha Classes. All rights reserved.
+  </div>
+</footer>
+<script src="scroll-top.js"></script>
 
 </body>
 </html>

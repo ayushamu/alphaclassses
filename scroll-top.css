@@ -1,0 +1,26 @@
+/* =========================
+   SCROLL TO TOP BUTTON
+========================= */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #facc15;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background: #fde047;
+  transform: translateY(-4px);
+}
