@@ -9,22 +9,34 @@ if (window.location.pathname.includes("dashboard.html")) {
 
 // Login
 function login() {
-  const input = document.getElementById("adminPassword").value;
+  const password = document.getElementById("adminPassword").value;
   const error = document.getElementById("errorMsg");
 
-  if (input === ADMIN_PASSWORD) {
-    sessionStorage.setItem("adminLoggedIn", "true");
-    window.location.href = "dashboard.html";
-  } else {
-    error.textContent = "Incorrect password";
-  }
+  fetch("/api/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ password })
+  })
+    .then(res => {
+      if (!res.ok) throw new Error("Invalid password");
+      return res.json();
+    })
+    .then(data => {
+      localStorage.setItem("admin_token", data.token);
+      window.location.href = "dashboard.html";
+    })
+    .catch(() => {
+      error.textContent = "Invalid password";
+    });
 }
+
 
 // Logout
 function logout() {
-  sessionStorage.removeItem("adminLoggedIn");
+  localStorage.removeItem("admin_token");
   window.location.href = "admin.html";
 }
+
 
 // Add blog (google sheet)
 function addBlog() {
