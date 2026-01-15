@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard | Alpha Classes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- quill css -->
+   <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+   <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <div class="admin-login" style="width: 600px;">
+    <h2>Admin Dashboard</h2>
+    <p>Manage Blogs – Alpha Classes</p>
+
+    <input type="text" id="title" placeholder="Blog Title" />
+    <input type="text" id="image" placeholder="Featured Image URL" />
+    <div id="toolbar">
+  <select class="ql-header">
+    <option value="1">H1</option>
+    <option value="2">H2</option>
+    <option value="3">H3</option>
+    <option selected></option>
+  </select>
+  <button class="ql-bold"></button>
+  <button class="ql-italic"></button>
+  <button class="ql-list" value="ordered"></button>
+  <button class="ql-list" value="bullet"></button>
+  <button class="ql-link"></button>
+  <button class="ql-image"></button>
+  <button class="ql-video"></button>
+</div>
+
+    <div id="editor" style="height: 250px;"></div>
+
+
+    <button onclick="addBlog()">Add Blog</button>
+    <button onclick="logout()" style="margin-top:10px;background:#334155;color:#fff;">
+      Logout
+    </button>
+
+    <p id="statusMsg"></p>
+
+    <a href="/blog.html">Blogs</a>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

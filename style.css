@@ -234,3 +234,32 @@ html, body {
       .hero h1 { font-size: 32px; }
       section { padding: 60px 20px; }
     }
+
+
+/* blog page */
+
+.blog-page {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.blog-card {
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.blog-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.blog-card .date {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
