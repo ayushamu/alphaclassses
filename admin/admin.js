@@ -1,11 +1,4 @@
-const ADMIN_PASSWORD = "alpha2026"; // change later if needed
 
-// Protect dashboard
-if (window.location.pathname.includes("dashboard.html")) {
-  if (sessionStorage.getItem("adminLoggedIn") !== "true") {
-    window.location.href = "admin.html";
-  }
-}
 
 // Login
 function login() {
