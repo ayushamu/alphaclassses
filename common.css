@@ -54,6 +54,11 @@ body {
   transition: right 0.3s ease;
   z-index: 1001;
 }
+.side-nav span {
+font-weight: 500;
+text-decoration: solid;
+}
+
 
 .side-nav a {
   display: block;

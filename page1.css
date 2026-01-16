@@ -185,6 +185,8 @@ body {
   text-align: center;
 }
 
+
+
 .video-placeholder {
   height: 180px;
   background: #e5e7eb;
@@ -236,6 +238,7 @@ body {
 }
 
 .new-price {
+  color: #000;
   font-size: 40px;
   font-weight: 700;
   margin: 6px 0;
@@ -243,8 +246,9 @@ body {
 
 .price-note {
   font-size: 14px;
+  
   margin-bottom: 20px;
-  color: #cbd5f5;
+  color: #f32424;
 }
 
 /* =========================
