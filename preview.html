@@ -6,13 +6,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+   <div class="preview-bar">
+  ⚠️ Preview Mode — This blog is not published yet
+</div>
+  <div class="device-toggle">
+  <button onclick="setPreview('desktop')" class="active">Desktop</button>
+  <button onclick="setPreview('mobile')">Mobile</button>
+</div>
+  <div id="previewWrapper" class="desktop-preview">
   <article class="blog-preview">
-    <h1 id="previewTitle"></h1>
+    <!-- blog content -->
+     <h1 id="previewTitle"></h1>
     <p class="blog-date" id="previewDate"></p>
     <img id="previewImage" />
     <div id="previewContent"></div>
   </article>
+</div>
+
+  <!-- <article class="blog-preview">
+    <h1 id="previewTitle"></h1>
+    <p class="blog-date" id="previewDate"></p>
+    <img id="previewImage" />
+    <div id="previewContent"></div>
+  </article> -->
 
   <script>
     const data = JSON.parse(sessionStorage.getItem("blog_preview"));
@@ -31,6 +47,22 @@
 
       document.getElementById("previewContent").innerHTML = data.content;
     }
+
+    function setPreview(type) {
+  const wrapper = document.getElementById("previewWrapper");
+  const buttons = document.querySelectorAll(".device-toggle button");
+
+  buttons.forEach(btn => btn.classList.remove("active"));
+
+  if (type === "mobile") {
+    wrapper.className = "mobile-preview";
+    buttons[1].classList.add("active");
+  } else {
+    wrapper.className = "desktop-preview";
+    buttons[0].classList.add("active");
+  }
+}
+
   </script>
 
 </body>
