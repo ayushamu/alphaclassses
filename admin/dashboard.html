@@ -5,20 +5,20 @@
   <title>Admin Dashboard | Alpha Classes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- <script>
+  <script>
   const token = localStorage.getItem("admin_token");
 
   if (token !== "alpha-admin-auth") {
     window.location.replace("/admin/admin.html");
   }
-</script> -->
+</script>
 
-<script>
+<!-- <script>
   console.log("DASHBOARD LOADED");
   console.log("Token:", localStorage.getItem("admin_token"));
 
   alert("Token is: " + localStorage.getItem("admin_token"));
-</script>
+</script> -->
 
 
 
@@ -64,7 +64,7 @@
 
     <a href="/blog.html">Blogs</a>
   </div>
-  <script> fetch("/api/verify", {
+  <!-- <script> fetch("/api/verify", {
   headers: {
     Authorization: `Bearer ${localStorage.getItem("admin_token")}`
   }
@@ -76,6 +76,6 @@
   }
 });
 </script>
-  <script src="admin.js"></script>
+  <script src="admin.js"></script> -->
 </body>
 </html>
