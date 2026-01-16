@@ -116,3 +116,18 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.preview-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #64748b;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.preview-btn:hover {
+  background: rgba(255,255,255,0.05);
+}

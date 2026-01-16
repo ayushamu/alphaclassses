@@ -127,3 +127,25 @@ function togglePassword() {
     toggle.textContent = "Show";
   }
 }
+
+
+function previewBlog() {
+  const title = document.getElementById("title").value;
+  const image = document.getElementById("image").value;
+  const content = quill.root.innerHTML;
+
+  if (!title || !content) {
+    alert("Please add title and content before preview");
+    return;
+  }
+
+  const previewData = {
+    title,
+    image,
+    content,
+    date: new Date().toLocaleDateString()
+  };
+
+  sessionStorage.setItem("blog_preview", JSON.stringify(previewData));
+  window.open("/preview.html", "_blank");
+}

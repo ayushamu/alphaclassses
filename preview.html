@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Preview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <article class="blog-preview">
+    <h1 id="previewTitle"></h1>
+    <p class="blog-date" id="previewDate"></p>
+    <img id="previewImage" />
+    <div id="previewContent"></div>
+  </article>
+
+  <script>
+    const data = JSON.parse(sessionStorage.getItem("blog_preview"));
+
+    if (!data) {
+      document.body.innerHTML = "<p>No preview data found.</p>";
+    } else {
+      document.getElementById("previewTitle").innerText = data.title;
+      document.getElementById("previewDate").innerText = data.date;
+
+      if (data.image) {
+        document.getElementById("previewImage").src = data.image;
+      } else {
+        document.getElementById("previewImage").style.display = "none";
+      }
+
+      document.getElementById("previewContent").innerHTML = data.content;
+    }
+  </script>
+
+</body>
+</html>
