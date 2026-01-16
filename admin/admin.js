@@ -1,9 +1,41 @@
 
 
 // Login
+// function login() {
+//   const password = document.getElementById("adminPassword").value;
+//   const error = document.getElementById("errorMsg");
+
+//   fetch("/api/login", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({ password })
+//   })
+//     .then(res => {
+//       if (!res.ok) throw new Error("Invalid password");
+//       return res.json();
+//     })
+//     .then(data => {
+//       localStorage.setItem("admin_token", data.token);
+//       window.location.href = "dashboard.html";
+//     })
+//     .catch(() => {
+//       error.textContent = "Invalid password";
+//     });
+// }
+
 function login() {
   const password = document.getElementById("adminPassword").value;
   const error = document.getElementById("errorMsg");
+  const btn = document.getElementById("loginBtn");
+  const text = btn.querySelector(".btn-text");
+  const loader = btn.querySelector(".btn-loader");
+
+  error.textContent = "";
+
+  // Show loader
+  btn.disabled = true;
+  text.style.display = "none";
+  loader.style.display = "block";
 
   fetch("/api/login", {
     method: "POST",
@@ -16,10 +48,15 @@ function login() {
     })
     .then(data => {
       localStorage.setItem("admin_token", data.token);
-      window.location.href = "dashboard.html";
+      window.location.href = "/admin/dashboard.html";
     })
     .catch(() => {
       error.textContent = "Invalid password";
+
+      // Restore button
+      btn.disabled = false;
+      loader.style.display = "none";
+      text.style.display = "inline";
     });
 }
 
@@ -78,3 +115,15 @@ if (document.getElementById("editor")) {
   });
 }
 
+function togglePassword() {
+  const input = document.getElementById("adminPassword");
+  const toggle = document.querySelector(".toggle-password");
+
+  if (input.type === "password") {
+    input.type = "text";
+    toggle.textContent = "Hide";
+  } else {
+    input.type = "password";
+    toggle.textContent = "Show";
+  }
+}

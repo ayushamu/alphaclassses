@@ -7,7 +7,11 @@ body {
   justify-content: center;
   height: 100vh;
 }
-
+.admin-logo {
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 0px;
+}
 .admin-login {
   background: #020617;
   padding: 40px;
@@ -50,4 +54,65 @@ body {
   color: #f87171;
   font-size: 13px;
   margin-top: 10px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px;
+  padding-right: 0px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #000000;
+  cursor: pointer;
+  user-select: none;
+}
+
+#loginBtn {
+  width: 100%;
+  padding: 14px;
+  background: #facc15;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+#loginBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-loader {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

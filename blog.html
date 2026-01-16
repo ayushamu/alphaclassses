@@ -5,17 +5,106 @@
   <title>Blogs | Alpha Classes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="scroll-top.css">
+  <!-- Favicon -->
+   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="AlphaClasses" />
+<link rel="manifest" href="/site.webmanifest" />
+
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 </head>
 <body>
 
-  <!-- HEADER (reuse your existing header here) -->
+ <!-- HEADER (same as other pages) -->
+   <header>
+ <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="resources/logo 4.jpg" alt="Alpha Classes">
+      <h2>Alpha Classes</h2>
+    </a>
+
+  
+  <nav >
+  
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="amu-forms-counselling-2026.html">Counselling</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+ 
+
+</header>
 
   <section class="blog-page">
     <h1>Latest Blogs</h1>
     <div id="blogList"></div>
   </section>
 
-  <!-- FOOTER -->
+ <footer class="site-footer">
+  <!-- scroll-top button -->
+  <button id="scrollTopBtn">
+  <i class="fas fa-angle-double-up"></i>
+</button>
+
+
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-col">
+      <img src="resources/logo 4.jpg" alt="Alpha Classes" class="footer-logo">
+      <p class="footer-text">
+        Alpha Classes provides trusted guidance for AMU admissions,
+        entrance exams, and academic success.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="amu-forms-counselling-2026.html">Counselling Support</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-social">
+  <a href="https://www.instagram.com/alphaclasses90/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@AlphaClasses90" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  <a href="https://t.me/alphaclasses90" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+  <a href="https://chat.whatsapp.com/JwvTTU2NO8uAA770LAKu60" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+  </div>
+<div class="footer-credit">
+  Made with <span class="heart">❤️</span> by
+  <a href="https://www.linkedin.com/in/ayush-gupta-amu/" target="_blank" rel="noopener">
+    Ayush Gupta
+  </a>
+</div>
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2026 Alpha Classes. All rights reserved.
+  </div>
+</footer>
+
+  <script src="app.js"></script>
+  <script src="scroll-top.js"></script>
 
   <script src="blog.js"></script>
 </body>

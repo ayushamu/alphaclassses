@@ -5,15 +5,50 @@
   <title>Alpha Classes Admin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="/common.css" />
+  <link rel="stylesheet" href="/footer.css" />
+  <link rel="stylesheet" href="s" />
+  <link rel="stylesheet" href="scroll-top.css">
+  <!-- Favicon -->
+   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="AlphaClasses" />
+<link rel="manifest" href="/site.webmanifest" />
+
+  <link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 </head>
 <body>
 
   <div class="admin-login">
+    <img src="../resources/logo 4.jpg" alt="Alpha Classes" class="admin-logo">
     <h2>Admin Login</h2>
     <p>Alpha Classes – Internal Access</p>
+    <p class="admin-subtext">
+  This panel is for Alpha Classes internal use only.<br />
+  Unauthorized access is strictly prohibited. If you forget your password kindly email: <a href="mailto:help@alphaclass.in" style="color:#facc15 ;">help@alphaclass.in</a> 
+</p>
 
-    <input type="password" id="adminPassword" placeholder="Enter password" />
-    <button onclick="login()">Login</button>
+
+    <div class="password-wrapper">
+  <input
+    type="password"
+    id="adminPassword"
+    placeholder="Enter admin password"
+  />
+  <div class="toggle-password" onclick="togglePassword()">Show</div>
+  <!-- <span class="toggle-password" onclick="togglePassword()">Show</span> -->
+</div>
+
+    <button id="loginBtn" onclick="login()">
+  <span class="btn-text">Login</span>
+  <span class="btn-loader"></span>
+</button>
+
 
     <p id="errorMsg"></p>
   </div>
