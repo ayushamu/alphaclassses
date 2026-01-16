@@ -5,6 +5,12 @@
   <title>Admin Dashboard | Alpha Classes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
+   //added for direct dashboard access block
+    const token = localStorage.getItem("admin_token");
+
+  if (!token) {
+    window.location.href = "/admin/admin.html";
+  }
   if (localStorage.getItem("admin_token") !== "alpha-admin-auth") {
     window.location.href = "admin.html";
   }
@@ -52,7 +58,18 @@
 
     <a href="/blog.html">Blogs</a>
   </div>
-
+  <script> fetch("/api/verify", {
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("admin_token")}`
+  }
+})
+.then(res => {
+  if (!res.ok) {
+    localStorage.removeItem("admin_token");
+    window.location.href = "/admin/admin.html";
+  }
+});
+</script>
   <script src="admin.js"></script>
 </body>
 </html>
