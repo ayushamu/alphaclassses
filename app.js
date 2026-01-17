@@ -112,6 +112,102 @@ window.closeMenu = function () {
 
 
 
+  const cards = document.querySelectorAll('.offering-card');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.boxShadow = "0 20px 40px rgba(0,0,0,0.1)";
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.boxShadow = "0 10px 30px rgba(0,0,0,0.06)";
+    });
+  });
+
+
+  window.addEventListener("load", () => {
+    const hero = document.querySelector(".hero-content");
+    hero.style.opacity = 0;
+    hero.style.transform = "translateY(20px)";
+
+    setTimeout(() => {
+      hero.style.transition = "all 0.8s ease";
+      hero.style.opacity = 1;
+      hero.style.transform = "translateY(0)";
+    }, 150);
+  });
+
+
+  const cardss = document.querySelectorAll('.problem-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(20px)";
+    card.style.transition = "all 0.6s ease";
+    observer.observe(card);
+  });
+
+
+  const aboutSection = document.querySelector('.about-program');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        aboutSection.style.opacity = 1;
+        aboutSection.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.2 });
+
+  aboutSection.style.opacity = 0;
+  aboutSection.style.transform = "translateY(20px)";
+  aboutSection.style.transition = "all 0.7s ease";
+
+  observer.observe(aboutSection);
+
+
+  const featureCards = document.querySelectorAll('.feature-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.2 });
+
+  featureCards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(20px)";
+    card.style.transition = "all 0.6s ease";
+    observer.observe(card);
+  });
+
+
+  const finalCTA = document.querySelector('.final-cta');
+
+  finalCTA.style.opacity = 0;
+  finalCTA.style.transform = "translateY(30px)";
+  finalCTA.style.transition = "all 0.8s ease";
+
+  window.addEventListener("scroll", () => {
+    const rect = finalCTA.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      finalCTA.style.opacity = 1;
+      finalCTA.style.transform = "translateY(0)";
+    }
+  });
+
+
+
 
 
 
