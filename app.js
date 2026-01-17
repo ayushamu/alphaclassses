@@ -136,75 +136,75 @@ window.closeMenu = function () {
   });
 
 
-  const cardss = document.querySelectorAll('.problem-card');
+  // const cards = document.querySelectorAll('.problem-card');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  }, { threshold: 0.2 });
+  // const observer = new IntersectionObserver(entries => {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.style.opacity = 1;
+  //       entry.target.style.transform = "translateY(0)";
+  //     }
+  //   });
+  // }, { threshold: 0.2 });
 
-  cards.forEach(card => {
-    card.style.opacity = 0;
-    card.style.transform = "translateY(20px)";
-    card.style.transition = "all 0.6s ease";
-    observer.observe(card);
-  });
-
-
-  const aboutSection = document.querySelector('.about-program');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        aboutSection.style.opacity = 1;
-        aboutSection.style.transform = "translateY(0)";
-      }
-    });
-  }, { threshold: 0.2 });
-
-  aboutSection.style.opacity = 0;
-  aboutSection.style.transform = "translateY(20px)";
-  aboutSection.style.transition = "all 0.7s ease";
-
-  observer.observe(aboutSection);
+  // cards.forEach(card => {
+  //   card.style.opacity = 0;
+  //   card.style.transform = "translateY(20px)";
+  //   card.style.transition = "all 0.6s ease";
+  //   observer.observe(card);
+  // });
 
 
-  const featureCards = document.querySelectorAll('.feature-card');
+  // const aboutSection = document.querySelector('.about-program');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  }, { threshold: 0.2 });
+  // const observer = new IntersectionObserver(entries => {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
+  //       aboutSection.style.opacity = 1;
+  //       aboutSection.style.transform = "translateY(0)";
+  //     }
+  //   });
+  // }, { threshold: 0.2 });
 
-  featureCards.forEach(card => {
-    card.style.opacity = 0;
-    card.style.transform = "translateY(20px)";
-    card.style.transition = "all 0.6s ease";
-    observer.observe(card);
-  });
+  // aboutSection.style.opacity = 0;
+  // aboutSection.style.transform = "translateY(20px)";
+  // aboutSection.style.transition = "all 0.7s ease";
+
+  // observer.observe(aboutSection);
 
 
-  const finalCTA = document.querySelector('.final-cta');
+  // const featureCards = document.querySelectorAll('.feature-card');
 
-  finalCTA.style.opacity = 0;
-  finalCTA.style.transform = "translateY(30px)";
-  finalCTA.style.transition = "all 0.8s ease";
+  // const observer = new IntersectionObserver(entries => {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.style.opacity = 1;
+  //       entry.target.style.transform = "translateY(0)";
+  //     }
+  //   });
+  // }, { threshold: 0.2 });
 
-  window.addEventListener("scroll", () => {
-    const rect = finalCTA.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      finalCTA.style.opacity = 1;
-      finalCTA.style.transform = "translateY(0)";
-    }
-  });
+  // featureCards.forEach(card => {
+  //   card.style.opacity = 0;
+  //   card.style.transform = "translateY(20px)";
+  //   card.style.transition = "all 0.6s ease";
+  //   observer.observe(card);
+  // });
+
+
+  // const finalCTA = document.querySelector('.final-cta');
+
+  // finalCTA.style.opacity = 0;
+  // finalCTA.style.transform = "translateY(30px)";
+  // finalCTA.style.transition = "all 0.8s ease";
+
+  // window.addEventListener("scroll", () => {
+  //   const rect = finalCTA.getBoundingClientRect();
+  //   if (rect.top < window.innerHeight - 100) {
+  //     finalCTA.style.opacity = 1;
+  //     finalCTA.style.transform = "translateY(0)";
+  //   }
+  // });
 
 
 
